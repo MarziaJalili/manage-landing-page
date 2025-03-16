@@ -3,17 +3,20 @@ import Hero from "./components/Hero";
 import Features from "./components/Features";
 import Testimonials from "./components/Testimonials";
 import Cta from "./components/Cta";
-import Footer from "./components/Footer";
+import Footer from "./components/footer/Footer";
 
+import { useState } from "react";
 const App = () => {
+  const [darkMood, setDarkMood] = useState(false);
+
   return (
     <main className="font-be-vietnam-pro">
-      <Header />
+      <Header darkMood={darkMood} setDarkMood={setDarkMood} />
       <Hero />
       <Features />
       <Testimonials />
       <Cta />
-      <Footer />
+      <Footer darkMood={darkMood} />
     </main>
   );
 };

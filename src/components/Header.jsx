@@ -1,10 +1,7 @@
 import Logo from "./Logo";
 import ToggleButton from "./ToggleButton";
 
-import { useState } from "react";
-
-const Header = () => {
-  const [darkMood, setDarkMood] = useState(false);
+const Header = ({ darkMood, setDarkMood }) => {
   return (
     <header>
       <nav className="relative container mx-auto  p-6 flex items-center justify-between">

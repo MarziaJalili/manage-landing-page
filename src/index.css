@@ -128,6 +128,10 @@ body.dark {
       color: #5e3fb8;
     }
   }
+
+  footer {
+    background-color: rgb(6, 6, 25);
+  }
 }
 .testimonials li {
   flex: 1;

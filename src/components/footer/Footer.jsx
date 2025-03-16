@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
-import Logo from "./Logo";
+import Logo from "../Logo";
 import SocialIcons from "./SocialIcons";
-const Footer = () => {
+import ListContainer from "./ListContainer";
+import Form from "./Form";
+const Footer = ({ darkMood }) => {
   // modify the screen size
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [range, setRange] = useState(windowWidth > 600 ? 50 : 20);
@@ -44,12 +46,16 @@ const Footer = () => {
   });
 
   return (
-    <footer className="w-[100vw] bg-Very-Dark-Blue flex flex-col-reverse justify-between px-6 py-10 space-y-8 md:flex-row md:space-y-0">
+    <footer className="w-[100vw] bg-Very-Dark-Blue flex flex-col-reverse justify-between px-12 py-10 space-y-8 md:flex-row md:space-y-0">
       <div className="flex flex-col-reverse items-center justify-between space-y-12 md:flex-col md:space-y-0 md:items-center">
-        <Logo />
-
+        <Logo darkMood={darkMood} />
+        <p className="mx-auto my-6 text-center text-white md:hidden">
+          Copyright &copy; 2025, All Rights Reserved.
+        </p>
         <SocialIcons />
       </div>
+      <ListContainer />
+      <Form />
       <div
         className={`-z-1 pointer-events-none bubbles fixed flex h-[${totalHeight}] inset-0 gap-1 flex-wrap w-[100vw]`}
       >
