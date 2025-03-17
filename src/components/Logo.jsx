@@ -1,7 +1,6 @@
 import React from "react";
 
 const Logo = ({ darkMood }) => {
-  console.log(darkMood);
   return (
     <svg
       className="cursor-pointer"

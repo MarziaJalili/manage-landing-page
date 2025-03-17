@@ -19,6 +19,7 @@
   /* set the animation */
   --animate-move: move 10s linear infinite;
 }
+
 /* animate the bubbles */
 .bubbles span {
   pointer-events: none;
@@ -50,6 +51,30 @@
 ::-moz-selection {
   background-color: #ffecbc;
   color: var(--color-heading);
+}
+
+/* mobile nav animation */
+#menu {
+  animation: show-nav 1s ease 1 forwards;
+  &.fade-nav {
+    animation: fade-nav 1s ease 1 forwards;
+  }
+}
+
+@keyframes show-nav {
+  from {
+    transform: translateX(100%);
+  }
+
+  to {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes fade-nav {
+  to {
+    transform: translateX(105%);
+  }
 }
 
 /* dark mood */
@@ -132,8 +157,39 @@ body.dark {
   footer {
     background-color: rgb(6, 6, 25);
   }
+
+  #menu {
+    background-color: rgb(6, 6, 25);
+  }
+
+  .hamburger span {
+    background-color: #f6f6f6;
+  }
 }
-.testimonials li {
-  flex: 1;
-  width: 100%;
+
+/* hamburger menu */
+.hamburger {
+  transition: all 0.25s;
+  span {
+    transition: all 0.5s;
+  }
+}
+.hamburger-bottom {
+  transform: translateY(14px);
+}
+.hamburger.open {
+  transform: rotate(90deg);
+  transform: translateY(0px);
+
+  .hamburger-top {
+    transform: rotate(45deg) translateY(6px) translate(6px);
+  }
+
+  .hamburger-middle {
+    display: none;
+  }
+
+  .hamburger-bottom {
+    transform: rotate(-45deg) translateY(6px) translate(-6px);
+  }
 }
