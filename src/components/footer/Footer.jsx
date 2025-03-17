@@ -17,11 +17,6 @@ const Footer = ({ darkMood }) => {
     });
   }, []);
 
-  // determine the total height of the page
-  const totalHeight = document.documentElement.scrollHeight;
-  const viewportHeight = window.innerHeight;
-  const distance = totalHeight - viewportHeight;
-
   // generate bubbles
   const bubblesData = Array.from(
     { length: windowWidth > 1000 ? 90 : 70 },
@@ -32,7 +27,6 @@ const Footer = ({ darkMood }) => {
     const randomNum = Math.floor(Math.random() * range) + 10;
     const style = {
       "--i": randomNum,
-      "--height": `-${distance}px`,
     };
     return (
       <span
@@ -57,7 +51,7 @@ const Footer = ({ darkMood }) => {
       <ListContainer />
       <Form />
       <div
-        className={`-z-1 pointer-events-none bubbles fixed flex h-[${totalHeight}] inset-0 gap-1 flex-wrap w-[100vw]`}
+        className={`-z-1 pointer-events-none bubbles fixed flex  inset-0 gap-1 flex-wrap w-[100vw]`}
       >
         {bubbles}
       </div>

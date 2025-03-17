@@ -69,7 +69,7 @@ const Testimonials = () => {
         What's differnet about Manage?
       </h2>
       {/* Testimonial Container */}
-      <ul className="testimonials container mx-auto flex w-full items-center my-24 md:flex-wrap gap-4 md:space-x-6 md:pt-10">
+      <ul className="testimonials container flex items-center my-24 md:space-x-6 md:pt-10">
         {testimonialsArray}
       </ul>
       <button>

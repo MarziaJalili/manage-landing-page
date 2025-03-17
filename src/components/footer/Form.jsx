@@ -1,6 +1,6 @@
 const Form = () => {
   return (
-    <div action="#" className="flex flex-col justify-between">
+    <div className="flex flex-col justify-between">
       <form
         action="
     #"
