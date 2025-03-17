@@ -82,7 +82,7 @@ const Header = ({ darkMood, setDarkMood }) => {
       <button
         aria-label="Toggles the Navigation Menu"
         id="menu-btn"
-        className="hamburger relative transition-all w-[24px] h-[24px] cursor-pointer lg:hidden focus:outline-none"
+        className="hamburger absolute right-6 transition-all w-[24px] h-[24px] cursor-pointer lg:hidden focus:outline-none"
         onClick={handleClick}
       >
         <span className="hamburger-top absolute top-0 left-0 w-[24px] h-[2px]   bg-Very-Dark-Blue"></span>
@@ -94,7 +94,7 @@ const Header = ({ darkMood, setDarkMood }) => {
       <button>
         <a
           href="#"
-          className="dark-btn p-3 px-6 font-medium text-white bg-Bright-Red rounded-full baseline hover:bg-Bright-Red-Sup-Light transition-colors duration-300 hidden text-bold  lg:block"
+          className="dark-btn p-3 px-6 font-medium text-white bg-Bright-Red rounded-full baseline hover:bg-Bright-Red-Sup-Light transition-colors duration-300 hidden text-bold lg:block"
         >
           Get Started
         </a>
